@@ -1,0 +1,789 @@
+/* Custom CSS for the girly style design */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #444444;
+    background-color: #fff0f5; /* Light Pink background */
+  }
+  
+  header {
+    background-color: #ff80ab; /* Light Pink */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 40px;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  header h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #ffffff;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  nav a:hover {
+    background-color: #ffffff;
+    color: #ff80ab; /* Light Pink */
+  }
+  
+  .banner {
+    margin-top: 20px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #ff80ab; /* Light Pink */
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #ff80ab; /* Light Pink */
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444444;
+  }
+  
+  .event {
+    background-color: #ffe4e9; /* Lighter Pink */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .event h3 {
+    margin: 0;
+    color: #ff80ab; /* Light Pink */
+  }
+  
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .couple-photo {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .couple-photo img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #ff80ab; /* Light Pink */
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ff80ab; /* Light Pink */
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #ff80ab; /* Light Pink */
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ffa4c3; /* Slightly darker pink */
+  }
+  
+  footer {
+    background-color: #ff80ab; /* Light Pink */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #ffa4c3; /* Slightly darker pink */
+  }
+  
+  .map-container {
+    display: flex;
+  }
+  
+  .left-map,
+  .right-map {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .left-map {
+    order: 1; /* This will display "Your location" on the left */
+  }
+  
+  .right-map {
+    order: 2; /* This will display "My location" on the right */
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 350px; /* Set the desired height for the iframes */
+  }
+  
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .photo-gallery img {
+    width: 100%; /* Set a fixed width to 100% of the container */
+    height: auto; /* Set a fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 5px;
+  }
+
+  
+  /* Pinkish style */
+  #gallery {
+    background-color: #f8b1c3;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  #gallery h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  /* Disney style */
+  .photo-gallery {
+    border: 4px solid #fff;
+    background-color: #f9e4ea;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-gallery img {
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .photo-gallery img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Custom CSS for the header with images on the left and right */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #f8b1c3;
+    padding: 20px;
+    color: #ffffff;
+  }
+  
+/* Container for the flip effect */
+.left-image {
+  flex: 1;
+  max-width: 150px;
+  perspective: 1000px; /* Set the depth of the 3D space */
+}
+
+/* Style the image */
+.left-image img {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s; /* Set the duration of the flip effect */
+}
+
+/* Flip the image when hovering */
+.left-image:hover img {
+  transform: rotateY(180deg);
+}
+
+/* Container for the flip effect */
+.right-image {
+  flex: 1;
+  max-width: 150px;
+  perspective: 1000px; /* Set the depth of the 3D space */
+}
+
+/* Style the image */
+.right-image img {
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s; /* Set the duration of the flip effect */
+}
+
+/* Flip the image when hovering */
+.right-image:hover img {
+  transform: rotateY(180deg);
+}
+
+
+  
+  nav {
+    background-color: #ffa4c3; /* Light Pink background */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 30px; /* Increased border radius for a rounder button */
+    background-color: #ffa4c3; /* Slightly darker pink */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    background-color: #ffc0cb; /* Light Pink on hover */
+  }
+  
+  /* Media query for responsive layout (adjust as needed) */
+  @media screen and (max-width: 768px) {
+    nav li {
+      margin: 0 10px;
+    }
+  }
+  
+  .banner {
+    flex: 3;
+    text-align: center;
+  }
+  
+  .banner h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .banner h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  /* Media query for responsive layout (adjust as needed) */
+  @media screen and (max-width: 768px) {
+    header {
+      flex-wrap: wrap;
+    }
+  
+    .left-image,
+    .right-image {
+      flex: 1 1 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .banner {
+      flex: 1 1 100%;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Set a background color */
+  body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+  
+  /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+  /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+  /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+      left: 15px;
+    }
+  
+  /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+
+/* Add the following CSS to make the design responsive */
+
+/* Media query for screens less than 768px wide (tablets and mobile phones) */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-image,
+  .right-image {
+    flex: 1 1 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .banner {
+    flex: 1 1 100%;
+  }
+
+  nav li {
+    margin: 0 5px;
+  }
+
+  /* Adjust timeline for small screens */
+  .timeline::after {
+    left: 16px;
+  }
+
+  .container {
+    padding-left: 50px;
+    padding-right: 25px;
+  }
+
+  .container::before {
+    left: 40px;
+  }
+}
+
+/* Media query for screens less than 600px wide (mobile phones) */
+@media screen and (max-width: 600px) {
+  /* Adjust timeline for smaller screens */
+  .timeline::after {
+    left: 21px;
+  }
+
+  .container {
+    padding-left: 40px;
+    padding-right: 15px;
+  }
+
+  .container::before {
+    left: 30px;
+  }
+}
+
+/* Media query for screens less than 480px wide (smaller mobile phones) */
+@media screen and (max-width: 480px) {
+  /* Adjust timeline for even smaller screens */
+  .timeline::after {
+    left: 11px;
+  }
+
+  .container {
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+  .container::before {
+    left: 20px;
+  }
+
+  /* Reduce font size for better fit on small screens */
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  /* Reduce padding for better fit on small screens */
+  .content {
+    padding: 10px 15px;
+  }
+
+  .event {
+    padding: 15px;
+  }
+
+  /* Adjust map height for small screens */
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .couple-photo img {
+    max-width: 80%;
+  }
+}
+
+.clock {
+  font-size: 14px; /* Adjust the font size as per your preference */
+  font-family: Arial, sans-serif;
+  border: 2px solid #333;
+  padding: 3px 5px; /* Adjust the padding as per your preference */
+  border-radius: 5px;
+  background-color: #eb38b5;
+}
+
+.justified-text {
+  text-align: justify;
+}
+
+/* Custom CSS for the girly style design */
+
+/* Rest of the CSS code... */
+
+/* Media query for screens less than 768px wide (tablets and mobile phones) */
+@media screen and (max-width: 768px) {
+  /* Header styles */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-image,
+  .right-image {
+    flex: 1 1 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+
+  .banner {
+    flex: 1 1 100%;
+  }
+
+  nav li {
+    margin: 0 5px;
+  }
+
+  /* Timeline styles */
+  .timeline::after {
+    left: 16px;
+  }
+
+  .container {
+    padding-left: 50px;
+    padding-right: 25px;
+  }
+
+  .container::before {
+    left: 40px;
+  }
+
+  /* Adjust font sizes for better fit on small screens */
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  /* Adjust padding for better fit on small screens */
+  .content {
+    padding: 10px 15px;
+  }
+
+  .event {
+    padding: 15px;
+  }
+
+  /* Adjust map height for small screens */
+  .map-container iframe {
+    height: 250px;
+  }
+
+  .couple-photo img {
+    max-width: 80%;
+  }
+}
+
+/* Media query for screens less than 600px wide (mobile phones) */
+@media screen and (max-width: 600px) {
+  /* Adjust timeline for smaller screens */
+  .timeline::after {
+    left: 21px;
+  }
+
+  .container {
+    padding-left: 40px;
+    padding-right: 15px;
+  }
+
+  .container::before {
+    left: 30px;
+  }
+}
+
+/* Media query for screens less than 480px wide (smaller mobile phones) */
+@media screen and (max-width: 480px) {
+  /* Adjust timeline for even smaller screens */
+  .timeline::after {
+    left: 11px;
+  }
+
+  .container {
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+  .container::before {
+    left: 20px;
+  }
+
+  /* Reduce font size for better fit on small screens */
+  header h1 {
+    font-size: 26px;
+  }
+
+  header h2 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  /* Reduce padding for better fit on small screens */
+  .content {
+    padding: 8px 12px;
+  }
+
+  .event {
+    padding: 12px;
+  }
+
+  /* Adjust map height for small screens */
+  .map-container iframe {
+    height: 200px;
+  }
+
+  .couple-photo img {
+    max-width: 70%;
+  }
+}
+

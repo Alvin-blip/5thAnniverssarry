@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8e1e9; /* Light pink background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fde2e4; /* Pale pink background */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0; /* Start with opacity set to 0 */
+  transform: translateY(-50px); /* Move the container up by 50px */
+  animation: fadeIn 1s ease-out forwards; /* Apply the animation */
+        }
+
+        /* Define the fadeIn animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Animation ends with opacity set to 1 */
+    transform: translateY(0); /* Reset the vertical position */
+  }
+}
+
+        .login-container h1 {
+            text-align: center;
+            color: #ff5b77; /* Pinkish text */
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #ff5b77; /* Pinkish text */
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ff5b77; /* Pinkish border */
+            border-radius: 12px;
+            background-color: #f9e3e4; /* Light pink input background */
+            color: #2d2d2d; /* Dark text */
+        }
+
+        .form-group input:focus {
+            border-color: #ff9ea9; /* Lighter pink on focus */
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            color: #fff; /* White text */
+            background-color: #ff5b77; /* Pinkish background */
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-group button:hover {
+            background-color: #ff3a57; /* Slightly darker pink on hover */
+        }
+
+        .form-group .forgot-password {
+            margin-top: 15px;
+            text-align: center;
+            color: #ff5b77; /* Pinkish text */
+            font-size: 16px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .form-group .forgot-password:hover {
+            color: #ff9ea9; /* Lighter pink on hover */
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #ff5b77; /* Pinkish text */
+            font-size: 12px;
+        }
+
+        /* ...Your existing CSS code... */
+
+.love-meter {
+  display: none;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.heart {
+  width: 30px;
+  height: 30px;
+  background-image: url('heart.png'); /* Replace with your heart icon */
+  background-size: cover;
+  animation: heartbeat 0.6s infinite;
+}
+
+.meter {
+  width: 100px;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.meter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #ff5b77; /* Pinkish background */
+  width: 0;
+  animation: fillMeter 3s linear forwards;
+}
+
+/* Keyframes for the heartbeat animation */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Keyframes for filling up the meter */
+@keyframes fillMeter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome Back</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <i class="eye-icon" id="toggle-password" onclick="togglePasswordVisibility()"></i>
+            </div>
+            <div class="form-group">
+                <button type="submit">Log In</button>
+            </div>
+            <div class="error-message" style="color: #ff5b77; text-align: center; font-size: 14px;"></div>
+        </form>
+        <div class="footer">
+            Designed with 💖 by your poging darling
+        </div>
+    </div>
+
+<div class="love-meter">
+    <div class="heart"></div>
+    <div class="meter"></div>
+  </div>
+  
+
+    <script>
+          function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('toggle-password');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.add('fa-eye-slash');
+                eyeIcon.classList.remove('fa-eye');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.getElementById('login-form');
+  const loveMeter = document.querySelector('.love-meter');
+
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessageElement = document.querySelector('.error-message');
+
+    if (username === 'alzy' && password === 'zva080218avg') {
+      // Hide the login form
+      loginForm.style.display = 'none';
+
+      // Show the love meter
+      loveMeter.style.display = 'flex';
+
+      // Delay before redirecting to index.html (adjust the delay time as needed)
+      setTimeout(function() {
+        window.location.href = 'login.html';
+      }, 3000); // 3000 milliseconds (3 seconds) delay
+    } else {
+      errorMessageElement.textContent = 'Invalid username or password';
+    }
+  });
+});
+
+    </script>
+</body>
+</html>
